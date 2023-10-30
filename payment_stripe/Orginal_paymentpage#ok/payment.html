@@ -13,7 +13,7 @@
     function generatePaymentLink() {
       // Call an API or server-side function to generate the payment link
       // Replace this part with your actual code to generate the payment link
-      const YOUR_PAYMENT_LINK_URL = 'https://buy.stripe.com/test_3csdTt2WyfGC2JyfYY'; // Replace with your actual payment link
+      const YOUR_PAYMENT_LINK_URL = 'https://buy.stripe.com/test_aEU03xdvd8ZCau4145'; // Replace with your actual payment link
 
       return YOUR_PAYMENT_LINK_URL;
     }
@@ -22,7 +22,17 @@
       const paymentLink = generatePaymentLink();
       window.location.href = paymentLink; // Redirect to the payment link
     }
+    const paymentLink = true; // Replace this with your actual payment response
 
+if (paymentLink === true) {
+    // If payment is successful
+    window.location.href = 'redirectanim.html'; // Redirect to the success page
+} else {
+    // If payment failed or was aborted
+    // You can handle the failure case here
+    alert('Payment was not successful.'); // Show an alert or handle the failure as needed
+}
+   
     redirectToPaymentPage(); // Call the function to redirect to the payment link
   </script>
 </body>
